@@ -431,10 +431,14 @@ section {
   display: none;
   flex-direction: column;
   margin-left: 450px;
-  margin-top: 600px;
+  margin-top: 500px;
   padding: 20px 30px;
   z-index: 2;
 
+}
+
+#section-form .quiz-box.active{
+  display: flex;
 }
 
 
