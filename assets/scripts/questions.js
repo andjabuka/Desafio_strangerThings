@@ -55,5 +55,60 @@ let questions = [
             "d) function"
         ]
     },
+    {
+        numb: 6,
+        question:"Qual declaração em JavaScript pode ser usada para criar uma variável que não pode ser reatribuída?",
+        answer:"c) const",
+        options: [
+            "a) let",
+            "b) var",
+            "c) const",
+            "d) function"
+        ]
+    },
+    {
+        numb: 7,
+        question:"Qual declaração em JavaScript pode ser usada para criar uma variável que não pode ser reatribuída?",
+        answer:"c) const",
+        options: [
+            "a) let",
+            "b) var",
+            "c) const",
+            "d) function"
+        ]
+    },
+    {
+        numb: 8,
+        question:"Qual declaração em JavaScript pode ser usada para criar uma variável que não pode ser reatribuída?",
+        answer:"c) const",
+        options: [
+            "a) let",
+            "b) var",
+            "c) const",
+            "d) function"
+        ]
+    },
+    {
+        numb: 9,
+        question:"Qual declaração em JavaScript pode ser usada para criar uma variável que não pode ser reatribuída?",
+        answer:"c) const",
+        options: [
+            "a) let",
+            "b) var",
+            "c) const",
+            "d) function"
+        ]
+    },
+    {
+        numb: 10,
+        question:"Qual declaração em JavaScript pode ser usada para criar uma variável que não pode ser reatribuída?",
+        answer:"c) const",
+        options: [
+            "a) let",
+            "b) var",
+            "c) const",
+            "d) function"
+        ]
+    },
 
 ];
