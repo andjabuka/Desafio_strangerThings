@@ -595,13 +595,9 @@ section {
     color: #CF0F0F;
   }
 .result-box img {
-    border: 10px solid blue;
-    position: absolute;
-    display: block;
-    transform: scale(.25);
-    margin-top: 0%;
-
-    z-index: 0;
+  width: 200px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Ajusta o conteúdo da imagem */
 }
 /*** FOOTER STYLES ***/
 
