@@ -1,8 +1,10 @@
+
 const startBtn = document.querySelector('.start-btn');
 const ruleForm = document.querySelector('.form-container');
 const quizBox = document.querySelector('.quiz-box')
 const optionList = document.querySelector('.option-list');
 const resultBox = document.querySelector('.result-box');
+const restartBtn = document.getElementById('restart-btn');
 
 
 
@@ -10,6 +12,7 @@ startBtn.onclick = () => {
     ruleForm.classList.add('active');
     quizBox.classList.add('active');
     nextBtn.classList.add('active');
+    nextBtn.classList.remove('active');  
     questionCount++;
     showQuestions(questionCount);
    
@@ -23,14 +26,14 @@ const nextBtn = document.querySelector('.next-btn');
 
     
 nextBtn.onclick = () => {
-    if (questionCount <questions.length - 1) {
+    if (questionCount <questions.length  - 1) {
         questionCount++;
         showQuestions(questionCount);
 
         questionNumb++;
         questionCounter(questionNumb);
 
-        
+        nextBtn.classList.remove('active');      
     }
     else {
 
@@ -57,45 +60,86 @@ function showQuestions(index) {
     }
 }
 
-
-
-
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
-    let correctAnswer = questions[questionCount].answer;
+    let selectedIndex = [...answer.parentElement.children].indexOf(answer); // Pega o índice da resposta selecionada
+    let character = questions[questionCount].points[selectedIndex]; // Personagem associado à resposta
     let allOptions = optionList.children.length;
 
-    if (userAnswer == correctAnswer) {
-        answer.classList.add('correct');
-        userScore += 1;
-        headerScore();
-    }
-    else {
-        answer.classList.add('incorrect');
 
-        for (let i = 0; i < allOptions; i++) {
-            if (optionList.children[i].textContent == correctAnswer) {
-                optionList.children[i].setAttribute('class', 'option correct');
-            }
-        }
-
+    // Atualiza os pontos do personagem
+    if (characterPoints[character] !== undefined) {
+        characterPoints[character]++;
     }
+
+    // Exibe o estado atual (apenas para debug)
+    console.log(characterPoints);
+
+    // Outras ações, como marcar a opção como correta ou incorreta
+    answer.classList.add('selected');
+    nextBtn.classList.add('active');
 
     //if user has selected, disabled all options
     for (let i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add('disabled');
     }
+}
+
 
     nextBtn.classList.add('active');
 
-}   
+
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total')
     questionTotal.textContent = `${index} of ${questions.length} Questions`;
 }
 
+
 function showResultBox() {
-    quizBox.classList.remove('active');
-    resultBox.classList.add('active');
+    // Determina o personagem com mais pontos
+    let maxPoints = 0;
+    let selectedCharacter = '';
+    for (const character in characterPoints) {
+        if (characterPoints[character] > maxPoints) {
+            maxPoints = characterPoints[character];
+            selectedCharacter = character;
+        }
+    }
+
+    // Atualiza o conteúdo do resultado
+    const resultTitle = document.querySelector('.result-title');
+    const resultDescription = document.querySelector('.result-description');
+    const resultImage = document.querySelector('.result-image');
+
+    if (selectedCharacter) {
+        resultTitle.textContent = characterDescriptions[selectedCharacter].title;
+        resultDescription.textContent = characterDescriptions[selectedCharacter].description;
+        resultImage.src = characterDescriptions[selectedCharacter].image;
+    }
+
+    // Exibe o resultado
+    quizBox.classList.remove('active'); // Oculta o quiz
+    resultBox.classList.add('active'); // Mostra o resultado
 }
 
+restartBtn.addEventListener('click', () => {
+
+    questionCount = -1;
+    questionNumb = 1;
+    userScore = 0;
+    // Redefine os pontos dos personagens
+    for (let character in characterPoints) {
+        characterPoints[character] = 0;
+    }
+
+    // Reinicia o índice da pergunta
+    currentQuestion = 0;
+
+    // Oculta a tela de resultado e mostra o quiz novamente
+    resultBox.classList.remove('active');
+    ruleForm.classList.remove('active');
+
+    // Redefine as opções e mostra a primeira pergunta novamente
+    showQuestions(0);
+    questionCounter(1); 
+});

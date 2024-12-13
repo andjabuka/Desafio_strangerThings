@@ -367,7 +367,7 @@ section {
 #section-form .form-container.active {
   border: 2px solid #CF0F0F;
   position: absolute;
-  height: 80vh;
+  height: 70vh;
   width: 500px;
   background: transparent;
   border-radius: 6px;
@@ -383,7 +383,7 @@ section {
 #section-form .form-container {
   border: 2px solid #CF0F0F;
   position: absolute;
-  height: 80vh;
+  height: 70vh;
   width: 500px;
   background: transparent;
   border-radius: 6px;
@@ -424,7 +424,7 @@ section {
   border: 2px solid #CF0F0F;
   flex-basis: 50%;
   position: absolute;
-  height: 80vh;
+  height: 70vh;
   width: 500px;
   background: transparent;
   border-radius: 6px;
@@ -527,7 +527,7 @@ section {
   color: var(--highlight-color);
   font-weight: 600;
   cursor: pointer;
-  /*pointer-events: none;*/
+  pointer-events: none;
   transition: .5s;
 }
 
@@ -554,11 +554,15 @@ section {
   
 }
 
+.option-list .option.disabled {
+  pointer-events: none;
+}
+
 #section-form .result-box {
     color: var(--highlight-color);
     border: 2px solid #CF0F0F;
     position: absolute;
-    height: 80vh;
+    height: 70vh;
     width: 500px;
     background: transparent;
     border-radius: 6px;
@@ -636,4 +640,19 @@ footer::before {
 footer::after {
   right: -50px;
   transform: rotateZ(10deg);
+}
+
+#restart-btn {
+  background-color: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restart-btn:hover {
+  background-color: #e84118;
 }
