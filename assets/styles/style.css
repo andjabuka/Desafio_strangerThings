@@ -469,13 +469,12 @@ section {
 
 #section-form .quiz-box .option {
   width: 100%;
-  padding: 12px;
-  height: 5vh;
+  padding: 12px 12px;
+  height: 6vh;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   font-size: 17px;
-  margin-top: 10px;
   margin: 15px 0;
   cursor: pointer;
   transition: 0.3s;
@@ -516,7 +515,7 @@ section {
   margin-top: 25px;
 }
 
-.quiz-footer .question-total {
+.quiz-box .quiz-footer .question-total {
   font-size: 16px;
   font-weight: 600;
 }
@@ -565,7 +564,7 @@ section {
   border-radius: 4px;
   font-size: 17px;
   margin: 15px 0;
-  margin-top: 12px;
+  margin-top: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
