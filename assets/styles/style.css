@@ -470,7 +470,7 @@ section {
 #section-form .quiz-box .option {
   width: 100%;
   padding: 12px;
-  height: 6vh;
+  height: 5vh;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
@@ -618,9 +618,9 @@ section {
     color: #CF0F0F;
   }
 .result-box img {
-  width: 200px; /* Largura fixa */
-  height: 200px; /* Altura fixa */
-  object-fit: cover; /* Ajusta o conteúdo da imagem */
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
 }
 /*** FOOTER STYLES ***/
 
