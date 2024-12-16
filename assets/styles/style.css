@@ -674,3 +674,90 @@ footer::after {
 #restart-btn:hover {
   background-color: #e84118;
 }
+
+@media (max-width: 768px) {
+
+
+  #section-stranger-things-trailer{
+    transform: scale(.9);
+  }
+  #section-stranger-things-gallery {
+    transform: scale(.9);
+  }
+  header {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    object-fit: cover;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: 1px solid red;
+  }
+  body {
+    overflow-x: scroll; /* Permite visualizar o que está vazando */
+  }
+
+  #section-form {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  #section-form .about-quiz {
+    transform: scale(.8);
+  }
+
+  #section-form .form-content {
+   
+    position: relative;
+    margin-right: 0;
+    display: block;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section-form .form-content h3 {
+    transform: scale(.6);
+  }
+  #section-form .form-container {
+    position: relative;
+    display: flex;
+    margin: auto;
+    height: 50%;
+
+  }
+
+  #section-form .quiz-box.active {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  #section-form .result-box.active {
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin: auto;
+    height: 50%;
+  }
+
+  .result-box img {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+
+
+  #section-form .quiz-box .option-list {
+    font-weight: 700;
+  }
+  #section-form .quiz-box .option-list .option {
+    font-weight: 700;
+  }
+
+
+}
+
