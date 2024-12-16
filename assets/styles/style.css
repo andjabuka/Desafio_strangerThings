@@ -693,9 +693,7 @@ footer::after {
     overflow: hidden;
     border: 1px solid red;
   }
-  body {
-    overflow-x: scroll; /* Permite visualizar o que está vazando */
-  }
+
 
   #section-form {
     width: 100%;
@@ -719,7 +717,11 @@ footer::after {
   }
 
   #section-form .form-content h3 {
-    transform: scale(.6);
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    max-width: 100%; 
+    margin: 0 auto;
   }
   #section-form .form-container {
     position: relative;
@@ -761,3 +763,105 @@ footer::after {
 
 }
 
+@media (max-width: 380px) {
+  
+    header {
+      min-height: 400px; 
+      padding: 20px; 
+    }
+  
+    .header-content {
+      max-width: 90%; 
+      padding: 40px 10px; 
+      text-align: center; 
+    }
+
+    #section-inverted-world {
+      display: flex;
+      flex-direction: column;
+      text-align:justify;
+    }
+
+    #section-inverted-world .section-texts h2 {
+      
+        font-size: 1.8rem;
+        line-height: 1.2;
+        padding: 0 10px;
+      
+    }
+
+    #section-inverted-world .invert-element {
+      position: relative;
+      display: block;
+      transform: scale(.5);
+    }
+  
+
+  #section-stranger-things-trailer {
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+  }
+
+  .video-frame {
+    width: 100%; /* O vídeo ocupará 100% da largura do container */
+    max-width: 700px; /* Define um limite máximo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+    margin: 0 auto; /* Centraliza o vídeo no container */
+    transform: scale(.9);
+  }
+  
+  .video-frame iframe {
+    width: 100%; /* O iframe ajusta à largura do pai */
+    height: 100%; /* O iframe ajusta à altura do pai, respeitando a proporção */
+    border: 0; /* Remove borda, caso necessário */
+  }
+
+  #section-stranger-things-gallery {
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+  }
+
+  #section-stranger-things-gallery .container h2 {
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+
+
+  #section-form {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    transform: scale(.5);
+  }
+
+  #section-form .about-quiz h2{
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  
+  }
+
+  #section-form .about-quiz p {
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  
+  }
+  #section-form .form-content h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+
+}
