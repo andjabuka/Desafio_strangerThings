@@ -571,6 +571,13 @@ section {
   margin-top: 10px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 900;
+}
+
+#section-form .quiz-box .option span {
+  
+  font-weight: 700;
+  font-size: 18px;
 }
 
 #section-form .quiz-box .option-list .option.selected{
@@ -881,7 +888,7 @@ footer::after {
     position: relative;
     display: flex;
     transform: scale(.55);
-    right: 140px;
+    right: 135px;
     
   
   }
@@ -890,7 +897,7 @@ footer::after {
     position: relative;
     display: flex;
     transform: scale(.55);
-    right: 140px;
+    right: 135px;
 
   }
 
