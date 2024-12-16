@@ -339,9 +339,12 @@ section {
   align-items: center;
 }
 
-.about-quiz h2 {
-  width: 900px;
+#section-form .about-quiz h4 {
+  font-size: 50px;
+  color:  var(--highlight-color);
+  text-align: center;
 }
+
 
 #section-form .form-content h3 {
   color: var(--highlight-color);
@@ -362,6 +365,7 @@ section {
   flex-basis: 30%;
   text-align: left;
   margin: 0;
+  transform: scale(.9)
 }
 
 #section-form .form-container.active {
@@ -763,7 +767,7 @@ footer::after {
 
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   
     header {
       min-height: 400px; 
@@ -804,17 +808,17 @@ footer::after {
   }
 
   .video-frame {
-    width: 100%; /* O vídeo ocupará 100% da largura do container */
-    max-width: 700px; /* Define um limite máximo */
-    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
-    margin: 0 auto; /* Centraliza o vídeo no container */
+    width: 100%; 
+    max-width: 700px; 
+    aspect-ratio: 16 / 9; 
+    margin: 0 auto; 
     transform: scale(.9);
   }
   
   .video-frame iframe {
-    width: 100%; /* O iframe ajusta à largura do pai */
-    height: 100%; /* O iframe ajusta à altura do pai, respeitando a proporção */
-    border: 0; /* Remove borda, caso necessário */
+    width: 100%; 
+    height: 100%; 
+    border: 0; 
   }
 
   #section-stranger-things-gallery {
@@ -833,35 +837,61 @@ footer::after {
 
 
   #section-form {
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    transform: scale(.5);
+      display: flex;
+      flex-direction: column;
+      text-align:justify;
+      padding: 20px;
+      box-sizing: border-box;
   }
 
-  #section-form .about-quiz h2{
+  .about-quiz h4{
     word-wrap: break-word;
     overflow-wrap: break-word; 
     white-space: normal; 
-    max-width: 100%; 
-    margin: 0 auto; 
+    font-size: 1.2rem;
+    line-height: 1.2;
+
   
   }
 
-  #section-form .about-quiz p {
+  #section-form .about-quiz p li {
     word-wrap: break-word;
-    overflow-wrap: break-word; 
-    white-space: normal; 
-    max-width: 100%; 
-    margin: 0 auto; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 1.5rem;
   
   }
   #section-form .form-content h3 {
     word-wrap: break-word;
     overflow-wrap: break-word; 
     white-space: normal; 
-    max-width: 100%; 
+    transform: scale(.6);
     margin: 0 auto; 
+  }
+
+  #section-form .form-container {
+    position: relative;
+    display: flex;
+    transform: scale(.65);
+    right: 90px;
+  }
+
+  #section-form .quiz-box.active {
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    transform: scale(.55);
+    right: 140px;
+    
+  
+  }
+
+  #section-form .result-box.active {
+    position: relative;
+    display: flex;
+    transform: scale(.55);
+    right: 140px;
+
   }
 
 }
