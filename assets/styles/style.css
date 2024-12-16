@@ -774,7 +774,7 @@ footer::after {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   
     header {
       min-height: 400px; 
@@ -880,7 +880,7 @@ footer::after {
     position: relative;
     display: flex;
     transform: scale(.65);
-    right: 90px;
+    right: 80px;
   }
 
   #section-form .quiz-box.active {
@@ -888,7 +888,7 @@ footer::after {
     position: relative;
     display: flex;
     transform: scale(.55);
-    right: 135px;
+    right: 130px;
     
   
   }
@@ -897,7 +897,7 @@ footer::after {
     position: relative;
     display: flex;
     transform: scale(.55);
-    right: 135px;
+    right: 130px;
 
   }
 
